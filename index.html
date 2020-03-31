@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercitación ES6 - Rodrigo Andrade</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    <div id="globalContainer">
+
+        <div id="firstContainer">
+
+            <video autoplay muted loop id="myVideo" class="videoAdd">
+                <source src="assets/video/video.m4v" type="video/mp4">
+            </video>
+
+            <div id="menu">
+
+                <h1>Lyrics finder</h1>
+                <p id="info">Escribí el nombre de un artista y una de sus canciones para encontrar su letra.</p>
+
+                <form>
+
+                    <div id="formContainer">
+
+                        <input  type="text" id="artistValue" placeholder="Nombre del artista" onchange="validate()">
+                        
+                        <input type="text" id="titleValue" placeholder="Nombre de la canción" onchange="validate()">
+                
+                    </div>
+
+                    <button type="button" id="button" class="disabled" onclick="showLyrics()">Buscar</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div id="secondContainer">
+
+            <p id="infoText">Usa el buscador para encontrar las letras de tus canciones favoritas.</p>
+
+            <div id="loadingState" class="hidden">
+                <img src="assets/img/vinyl.gif" width="200px" alt="loading_gif" id="loading">
+                <p>Loading...</p>
+            </div>
+
+            <div id="lyrics"></div>
+                <h2 id="songTitle"></h2>
+                <div id="content"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
